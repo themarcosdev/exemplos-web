@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+// Verifica se a quantidade de argumentos é válida
+if ($argc < 2) {
+    echo "Uso: meu_utilitario.php [nome]\n";
+    exit(1);
+}
+
+$argumento1 = $argv[1];
+
+// Obtendo ajuda
+if($argumento1 == "-h"){
+    echo "Ajuda : Este é um utilitario de saudação, passe como parâmetro um nome ex: ' php ".basename(__FILE__)." nome ' \n";
+    exit(1);
+}
+
+// Pega o argumento passado na linha de comando
+$nome = $argv[1];
+
+// Exibe uma mensagem de saudação
+echo "Olá, $nome!\n";
