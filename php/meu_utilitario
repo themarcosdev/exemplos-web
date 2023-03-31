@@ -1,5 +1,14 @@
 #!/usr/bin/env php
 <?php
+/*
+-- Escrevendo um nome ;
+Ex : php meu_utilitario Marcos
+
+-- Obtendo ajuda ;
+Ex : php meu_utilitario -h
+
+Defina as permissões do arquivo para torná-lo executável (chmod +x meu_utilitario.php no Linux ou macOS)
+*/
 
 // Verifica se a quantidade de argumentos é válida
 if ($argc < 2) {
