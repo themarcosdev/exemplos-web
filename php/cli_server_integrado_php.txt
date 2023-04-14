@@ -1,0 +1,19 @@
+/* cd pasta/com/arquivos/php/para/servir */
+
+/* Subindo serviço - ex: 1 */
+php -S localhost:8080
+
+/* Subindo serviço - ex: 2 */
+php -S 127.0.0.1:8081
+
+/* Ex: 3 */
+php -S localhost:8080 -t /home/$USER/public_docs
+
+/* Detectando server integrado (built in server)*/
+if (php_sapi_name() === "cli-server") {
+    // seu tratamento ;
+    habilitar_modo_developer();
+}
+
+/* Habilitando várias requisições */
+PHP_CLI_SERVER_WORKERS=8 php -S localhost:8080
