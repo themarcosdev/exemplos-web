@@ -1,6 +1,8 @@
+-- SOLUTION #1
 select nvl (MAX(tab.colum_id), 0 ) + 1 as res
   from owner.db_tab tab
 
+-- SOLUTION #2
 -- FUNCTION : 
 CREATE OR REPLACE FUNCTION ret_sequence(p_coluna IN VARCHAR2, p_tabela IN VARCHAR2)
   RETURN NUMBER
